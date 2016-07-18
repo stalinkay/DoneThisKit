@@ -22,6 +22,9 @@ To install it, simply add the following line to your Podfile:
 pod "DoneThisKit"
 ```
 
+## References
+- API Documentation: [Link](https://idonethis.com/api/v0.1/)
+
 ## Author
 
 Pedro Piñera Buendía, pepibumur@gmail.com
