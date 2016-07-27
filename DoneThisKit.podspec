@@ -12,11 +12,10 @@ Swift client for iDoneThis API
   s.ios.deployment_target = '8.0'
   s.source_files = 'DoneThisKit/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'DoneThisKit' => ['DoneThisKit/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
+  s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
+  
+  s.dependency 'Core', '~> 0.0'
 end
