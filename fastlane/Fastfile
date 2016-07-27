@@ -26,5 +26,16 @@ lane :push do
     )
     push_to_git_remote
     pod_push(path: 'DoneThisKit.podspec', repo: 'tulapps', sources: ['https://github.com/tulapps/Specs', 'https://github.com/CocoaPods/Specs'])
+    slack(
+      message: "A new version of DoneKit has been deployed",
+      channel: "#notifications",
+      success: true,
+      payload: {
+        'Build Date' => Time.new.to_s,
+        'Version' => version,
+      },
+      default_payloads: [:git_branch, :git_author]
+    )
+
   end
 end
