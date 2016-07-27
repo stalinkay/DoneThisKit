@@ -1,0 +1,26 @@
+before_all do
+  ensure_git_status_clean
+end
+
+lane :pods do
+  cocoapods(podfile: "Example/")
+end
+
+lane :tests do
+  scan(workspace: "Example/DoneThisKit.xcworkspace", scheme: "DoneThisKit-Example", clean: true)
+end
+
+lane :travis do
+  pods
+  tests
+end
+
+lane :push do
+  ensure_git_branch
+  if is_ci?
+    version = version_bump_podspec(path: "TSMessages.podspec", bump_type: "patch")
+    add_git_tag(tag: version)
+    push_to_git_remote
+    pod_push(path: 'DoneThisKit.podspec', repo: 'tulapps', sources: ['https://github.com/tulapps/Specs', 'https://github.com/CocoaPods/Specs'])
+  end
+end
