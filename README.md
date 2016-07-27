@@ -23,7 +23,7 @@ pod "DoneThisKit"
 ```
 
 ## References
-- API Documentation: [Link](https://idonethis.com/api/v0.1/)
+- API Documentation: [Link](https://i-done-this.readme.io/docs)
 
 ## Author
 
