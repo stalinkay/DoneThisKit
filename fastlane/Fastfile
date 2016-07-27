@@ -1,7 +1,3 @@
-before_all do
-  ensure_git_status_clean
-end
-
 lane :pods do
   cocoapods(podfile: "Example/")
 end
