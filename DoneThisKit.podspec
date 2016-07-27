@@ -18,5 +18,5 @@ Swift client for iDoneThis API
   s.watchos.deployment_target = '2.0'
   
   s.dependency 'Core/Networking', '~> 0.0'
-  sp.dependency 'SwiftyJSON', '~> 2.3'
+  s.dependency 'SwiftyJSON', '~> 2.3'
 end
