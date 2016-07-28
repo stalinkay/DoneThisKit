@@ -1,6 +1,7 @@
 # DoneThisKit
 
 [![CI Status](http://img.shields.io/travis/tulapps/DoneThisKit.svg?style=flat)](https://travis-ci.org/tulapps/DoneThisKit)
+[![codecov](https://codecov.io/gh/tulapps/DoneThisKit/branch/master/graph/badge.svg)](https://codecov.io/gh/tulapps/DoneThisKit)
 
 ## Example
 
