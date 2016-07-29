@@ -33,7 +33,7 @@ class EntrySpec: QuickSpec {
         }
         
         it("should have the correct status") {
-            expect(entry.status) == "done"
+            expect(entry.status) == EntryStatus.Done
         }
         
         it("should have the correct hashId") {
