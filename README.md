@@ -1,7 +1,7 @@
 # DoneThisKit
 
-[![CI Status](http://img.shields.io/travis/tulapps/DoneThisKit.svg?style=flat)](https://travis-ci.org/tulapps/DoneThisKit)
-[![codecov](https://codecov.io/gh/tulapps/DoneThisKit/branch/master/graph/badge.svg)](https://codecov.io/gh/tulapps/DoneThisKit)
+[![CI Status](http://img.shields.io/travis/carambastudio/DoneThisKit.svg?style=flat)](https://travis-ci.org/carambastudio/DoneThisKit)
+[![codecov](https://codecov.io/gh/carambastudio/DoneThisKit/branch/master/graph/badge.svg)](https://codecov.io/gh/carambastudio/DoneThisKit)
 
 ## Example
 
@@ -14,7 +14,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 Core podspec is part of the [Specs]() repository. In order to be recognized by CocoaPods you have to add that repository to your CocoaPods setup:
 
 ```
-pod repo add tulapps https://github.com/tulapps/Specs
+pod repo add carambastudio https://github.com/carambastudio/Specs
 ```
 
 To install it, simply add the following line to your Podfile:
