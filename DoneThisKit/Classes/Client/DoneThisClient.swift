@@ -1,7 +1,7 @@
 import Foundation
 import Core
 
-class DoneThisClient: JsonHttpClient {
+public class DoneThisClient: JsonHttpClient {
 
     // MARK: - Attributes
     
@@ -9,12 +9,15 @@ class DoneThisClient: JsonHttpClient {
     
     // MARK: - Init
     
-    public init(sessionAdapter: Adapter<NSURLRequest, NSURLRequest>? = nil,
+    internal init(sessionAdapter: Adapter<NSURLRequest, NSURLRequest>? = nil,
                 requestFactory: RequestFactory = RequestFactory.instance) {
         self.requestFactory = requestFactory
         super.init(sessionAdapter: sessionAdapter)
-
     }
     
+    public init() {
+        self.requestFactory = RequestFactory.instance
+        super.init()
+    }
     
 }

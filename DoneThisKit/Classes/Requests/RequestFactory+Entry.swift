@@ -13,7 +13,7 @@ internal extension RequestFactory {
         return self.urlRequestBuilder.get(path: "api/v2/entries/\(hashId)").build()
     }
     
-    internal func create(body body: String, teamId: String, occurredOn: NSDate?, status: EntryStatus?) -> NSURLRequest {
+    internal func entryCreate(body body: String, teamId: String, occurredOn: NSDate?, status: EntryStatus?) -> NSURLRequest {
         var parameters: [String: AnyObject] = [:]
         parameters["body"] = body
         parameters["team_id"] = teamId
