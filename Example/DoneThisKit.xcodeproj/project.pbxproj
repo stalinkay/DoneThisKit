@@ -21,6 +21,8 @@
 		23A11AC31D4E78E8000376E2 /* RequestFactorySharedExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A11AC21D4E78E8000376E2 /* RequestFactorySharedExample.swift */; };
 		23A11AC51D4E7BCF000376E2 /* EntryRequestFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A11AC41D4E7BCF000376E2 /* EntryRequestFactorySpec.swift */; };
 		23A11AC71D4E7ECB000376E2 /* HookRequestFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A11AC61D4E7ECB000376E2 /* HookRequestFactorySpec.swift */; };
+		23A11ACA1D4E7FB8000376E2 /* DateFormattersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A11AC91D4E7FB8000376E2 /* DateFormattersSpec.swift */; };
+		23A11ACD1D4E8146000376E2 /* DoneThisClientTeamSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A11ACC1D4E8146000376E2 /* DoneThisClientTeamSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		23A11AC21D4E78E8000376E2 /* RequestFactorySharedExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactorySharedExample.swift; sourceTree = "<group>"; };
 		23A11AC41D4E7BCF000376E2 /* EntryRequestFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryRequestFactorySpec.swift; sourceTree = "<group>"; };
 		23A11AC61D4E7ECB000376E2 /* HookRequestFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HookRequestFactorySpec.swift; sourceTree = "<group>"; };
+		23A11AC91D4E7FB8000376E2 /* DateFormattersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormattersSpec.swift; sourceTree = "<group>"; };
+		23A11ACC1D4E8146000376E2 /* DoneThisClientTeamSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneThisClientTeamSpec.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* DoneThisKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoneThisKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7762F8858AE13B435547C5EC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -108,6 +112,22 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		23A11AC81D4E7FB2000376E2 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				23A11AC91D4E7FB8000376E2 /* DateFormattersSpec.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		23A11ACB1D4E80E4000376E2 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				23A11ACC1D4E8146000376E2 /* DoneThisClientTeamSpec.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		565631FE483F809DD66F6DE7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +159,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				23A11ACB1D4E80E4000376E2 /* Client */,
+				23A11AC81D4E7FB2000376E2 /* Formatters */,
 				23A11ABF1D4E7872000376E2 /* Requests */,
 				236FE61D1D496A990071964D /* Helpers */,
 				236FE61B1D496A910071964D /* Fixtures */,
@@ -308,9 +330,11 @@
 				23A11AC11D4E788B000376E2 /* TeamRequestFactorySpec.swift in Sources */,
 				236FE62B1D496CFB0071964D /* EntrySpec.swift in Sources */,
 				23A11AC71D4E7ECB000376E2 /* HookRequestFactorySpec.swift in Sources */,
+				23A11ACA1D4E7FB8000376E2 /* DateFormattersSpec.swift in Sources */,
 				236FE62D1D496D1D0071964D /* HookSpec.swift in Sources */,
 				236FE6211D496AD90071964D /* FixtureReader.swift in Sources */,
 				23A11AC31D4E78E8000376E2 /* RequestFactorySharedExample.swift in Sources */,
+				23A11ACD1D4E8146000376E2 /* DoneThisClientTeamSpec.swift in Sources */,
 				236FE61F1D496AAE0071964D /* TeamSpec.swift in Sources */,
 				238F9DE71D496D3E00C1BB29 /* UserSpec.swift in Sources */,
 				23A11AC51D4E7BCF000376E2 /* EntryRequestFactorySpec.swift in Sources */,

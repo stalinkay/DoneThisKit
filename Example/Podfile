@@ -7,4 +7,5 @@ target 'DoneThisKit_Tests' do
   
   pod 'Quick', '~> 0.8'
   pod 'Nimble', '~> 3.0'
+  pod 'Mockingjay', '~> 1.2.1'
 end

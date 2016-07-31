@@ -9,15 +9,9 @@ public class DoneThisClient: JsonHttpClient {
     
     // MARK: - Init
     
-    internal init(sessionAdapter: Adapter<NSURLRequest, NSURLRequest>? = nil,
-                requestFactory: RequestFactory = RequestFactory.instance) {
-        self.requestFactory = requestFactory
-        super.init(sessionAdapter: sessionAdapter)
-    }
-    
-    public init() {
+    public init(sessionAdapter: Adapter<NSURLRequest, NSURLRequest>? = nil) {
         self.requestFactory = RequestFactory.instance
-        super.init()
+        super.init(sessionAdapter: sessionAdapter)
     }
     
 }
