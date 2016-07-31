@@ -4,7 +4,7 @@ import Nimble
 
 @testable import DoneThisKit
 
-class EntryRequestFactory: QuickSpec {
+class EntryRequestFactorySpec: QuickSpec {
     override func spec() {
         
         var subject: RequestFactory!

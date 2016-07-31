@@ -28,7 +28,7 @@ internal extension RequestFactory {
         }
         return self.urlRequestBuilder
             .post(path: "/api/v2/hooks/\(id)")
-            .withParameters(parameters)
+            .withBody(parameters)
             .build()
     }
     
