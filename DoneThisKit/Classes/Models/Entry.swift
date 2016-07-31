@@ -29,7 +29,7 @@ public struct Entry {
         guard let createdAtString = json["created_at"].string else { throw MappingError.MissingAttribute("created_at") }
         guard let updatedAtString = json["updated_at"].string else { throw MappingError.MissingAttribute("updated_at") }
         guard let statusString = json["status"].string else { throw MappingError.MissingAttribute("status") }
-        guard let status = EntryStatus(rawValue: statusString) else { throw MappingError.WrongValue("status") }
+        guard let status = EntryStatus(rawValue: statusString.capitalizedString) else { throw MappingError.WrongValue("status") }
         guard let hashId = json["hash_id"].string else { throw MappingError.MissingAttribute("hash_id") }
         let ocurredOnString = json["occurred_on"].string
         let completedOnString = json["completed_on"].string

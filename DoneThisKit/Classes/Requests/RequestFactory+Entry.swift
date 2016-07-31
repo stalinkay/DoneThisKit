@@ -27,7 +27,7 @@ internal extension RequestFactory {
         }
         return self.urlRequestBuilder
             .post(path:"api/v2/entries")
-            .withParameters(parameters)
+            .withBody(parameters)
             .build()
     }
     
@@ -45,7 +45,7 @@ internal extension RequestFactory {
         }
         return self.urlRequestBuilder
             .post(path:"api/v2/entries/\(hashId)")
-            .withParameters(parameters)
+            .withBody(parameters)
             .build()
     }
     
