@@ -13,7 +13,6 @@ end
 
 lane :push do
   ensure_git_branch
-  if is_ci?
     version = version_bump_podspec(path: "DoneThisKit.podspec", bump_type: "patch")
     changelog = changelog_from_git_commits
     github_release = set_github_release(
@@ -37,6 +36,4 @@ lane :push do
       },
       default_payloads: [:git_branch, :git_author]
     )
-
-  end
 end
