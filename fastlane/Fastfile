@@ -25,7 +25,8 @@ lane :push do
       commitish: "master"
     )
     push_to_git_remote
-    pod_push(path: 'DoneThisKit.podspec', repo: 'carambastudio', sources: ['https://github.com/carambastudio/Specs', 'https://github.com/CocoaPods/Specs'])
+    pod_push(allow_warnings: true)
+    pod_push(path: 'DoneThisKit.podspec', allow_warnings: true, repo: 'carambastudio', sources: ['https://github.com/carambastudio/Specs', 'https://github.com/CocoaPods/Specs'])
     slack(
       message: "A new version of DoneKit has been deployed",
       channel: "#notifications",
