@@ -5,10 +5,10 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 Swift client for iDoneThis API
                        DESC
-  s.homepage         = 'https://github.com/carambastudio/DoneThisKit'
+  s.homepage         = 'https://github.com/carambalabs/DoneThisKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Pedro Piñera' => 'pepibumur@gmail.com', 'Sergi Gracia' => 'sergigram@gmail.com', 'Isaac Roldán' => "isaac.roldan@gmail.com" }
-  s.source           = { :git => 'https://github.com/carambastudio/DoneThisKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/carambalabs/DoneThisKit.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.source_files = 'DoneThisKit/Classes/**/*'
   
