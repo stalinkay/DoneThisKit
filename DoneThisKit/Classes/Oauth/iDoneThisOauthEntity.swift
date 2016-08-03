@@ -2,15 +2,15 @@ import Foundation
 import SwiftyJSON
 import Core
 
-public struct iDoneThisOauthEntity: Oauth2Entity {
-    
+public struct DoneThisOauthEntity: Oauth2Entity {
+
     // MARK: - <Oauth2Entity>
-    
+
     public func authorizationUrl() -> String {
         //TODO
         return "test"
     }
-    
+
     public func authenticationRequestFromUrl(url: String) -> NSURLRequest? {
         //TODO
         return NSURLRequest(URL: NSURL(string: url)!)
@@ -20,5 +20,5 @@ public struct iDoneThisOauthEntity: Oauth2Entity {
         //TODO
         return Oauth2Session(accessToken: "", refreshToken: "")
     }
-    
+
 }

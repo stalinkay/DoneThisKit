@@ -2,9 +2,9 @@ import Foundation
 import SwiftyJSON
 
 public struct Entry {
-    
+
     // MARK: - Attributes
-    
+
     public let body: String
     public let createdAt: NSDate
     public let updatedAt: NSDate
@@ -15,10 +15,9 @@ public struct Entry {
     public let archivedAt: NSDate?
     public let team: Team
     public let user: User
-    
-    
+
     // MARK: - Init
-    
+
     public init(json: JSON) throws {
         guard let body = json["body"].string else { throw MappingError.MissingAttribute("body") }
         guard let createdAtString = json["created_at"].string else { throw MappingError.MissingAttribute("created_at") }
@@ -40,4 +39,3 @@ public struct Entry {
         self.archivedAt = (archivedAtString != nil) ? DateFormatters.main.dateFromString(archivedAtString!)! : nil
     }
 }
-

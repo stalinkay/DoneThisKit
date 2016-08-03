@@ -17,7 +17,7 @@ class HookSpec: QuickSpec {
         }
         
         it("should have the correct id") {
-            expect(hook.id) == 1
+            expect(hook.identifier) == 1
         }
         
         it("should have the correct targetUrl") {

@@ -2,30 +2,29 @@ import Foundation
 import SwiftyJSON
 
 public struct Hook {
-    
+
     // MARK: - Attributes
-    
-    public let id: Int
+
+    public let identifier: Int
     public let targetUrl: String
     public let createdAt: NSDate
     public let updatedAt: NSDate?
     public let team: Team
     public let user: User
-    
-    
+
     // MARK: - Init
-    
+
     internal init(json: JSON) throws {
-        guard let id = json["id"].int else { throw MappingError.MissingAttribute("id") }
+        guard let identifier = json["id"].int else { throw MappingError.MissingAttribute("id") }
         guard let targetUrl = json["target_url"].string else { throw MappingError.MissingAttribute("target_url") }
         guard let createdAtString = json["created_at"].string else { throw MappingError.MissingAttribute("created_at") }
         guard let updatedAtString = json["updated_at"].string else { throw MappingError.MissingAttribute("updated_at") }
-        self.id = id
+        self.identifier = identifier
         self.targetUrl = targetUrl
         self.team = try Team(json: json["team"])
         self.user = try User(json: json["user"])
         self.createdAt = DateFormatters.main.dateFromString(createdAtString)!
         self.updatedAt = DateFormatters.main.dateFromString(updatedAtString)!
     }
-    
+
 }

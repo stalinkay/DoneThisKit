@@ -4,7 +4,7 @@ PODS:
     - SwiftyJSON (~> 2.3)
   - Core/Networking (0.0.6):
     - Core/Foundation
-  - DoneThisKit (0.0.1):
+  - DoneThisKit (0.0.4):
     - Core/Networking (~> 0.0)
     - SwiftyJSON (~> 2.3)
   - Nimble (3.2.0)
@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Core: 29ea790d5a95230990d29678a3b681248f8fffc2
-  DoneThisKit: 8842b798c4d6db3ad5aeb7210141840342b02dd5
+  DoneThisKit: f215edccf34bf8543ffeeb0c21b2d1a591dfe833
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
   RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
