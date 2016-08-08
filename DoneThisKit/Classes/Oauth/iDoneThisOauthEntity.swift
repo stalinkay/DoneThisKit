@@ -1,6 +1,6 @@
 import Foundation
 import SwiftyJSON
-import Core
+import CarambaKit
 
 public struct DoneThisOauthEntity: Oauth2Entity {
 
@@ -15,7 +15,7 @@ public struct DoneThisOauthEntity: Oauth2Entity {
         //TODO
         return NSURLRequest(URL: NSURL(string: url)!)
     }
-    
+
     public func sessionFromJSON(response: JSON) throws -> Oauth2Session {
         //TODO
         return Oauth2Session(accessToken: "", refreshToken: "")

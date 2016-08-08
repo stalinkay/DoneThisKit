@@ -1,6 +1,12 @@
 import Foundation
 import SwiftyJSON
 
+public enum EntryStatus: String, Equatable {
+    case Goal
+    case Blocked
+    case Done
+}
+
 public struct Entry {
 
     // MARK: - Attributes
@@ -9,7 +15,7 @@ public struct Entry {
     public let createdAt: NSDate
     public let updatedAt: NSDate
     public let ocurredOn: NSDate?
-    public let status: String
+    public let status: EntryStatus
     public let hashId: String
     public let completedOn: NSDate?
     public let archivedAt: NSDate?
@@ -22,7 +28,8 @@ public struct Entry {
         guard let body = json["body"].string else { throw MappingError.MissingAttribute("body") }
         guard let createdAtString = json["created_at"].string else { throw MappingError.MissingAttribute("created_at") }
         guard let updatedAtString = json["updated_at"].string else { throw MappingError.MissingAttribute("updated_at") }
-        guard let status = json["status"].string else { throw MappingError.MissingAttribute("status") }
+        guard let statusString = json["status"].string else { throw MappingError.MissingAttribute("status") }
+        guard let status = EntryStatus(rawValue: statusString.capitalizedString) else { throw MappingError.WrongValue("status") }
         guard let hashId = json["hash_id"].string else { throw MappingError.MissingAttribute("hash_id") }
         let ocurredOnString = json["occurred_on"].string
         let completedOnString = json["completed_on"].string

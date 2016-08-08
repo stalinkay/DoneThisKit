@@ -17,6 +17,42 @@ To install it, simply add the following line to your Podfile:
 pod "DoneThisKit"
 ```
 
+## TODO
+- [ ] Authentication
+
+## How to
+
+### 1. Client
+
+```swift
+let client = DoneThisClient()
+```
+
+### 2. Requests
+
+```swift
+client.entryIndex().subscribeNext { response  in
+  // Entries
+}
+client.entryShow(hashId: hashId)
+client.entryCreate(body body: body, teamId: teamId, occurredOn: nil, status: .Done)
+client.entryUpdate(hashId: hashId, body body: body, teamId: teamId, occurredOn: nil, status: .Done)
+client.entryDelete(hashId: hashId)
+client.hookIndex()
+client.hookShow(identifier: id)
+client.hookUpdate(identifier: id, targetUrl: targetUrl, teamId: teamId)
+client.hookDelete(identifier: id)
+client.teamIndex()
+client.teamShow(hashId: hashId)
+  .doOnError { error in
+    // We got an error
+  }
+  .doOnNext { response in
+    // We got data
+  }
+  .subscribe()
+```
+
 ## References
 - API Documentation: [Link](https://i-done-this.readme.io/docs)
 
