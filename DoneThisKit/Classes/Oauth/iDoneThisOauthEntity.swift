@@ -1,6 +1,6 @@
 import Foundation
 import SwiftyJSON
-import Core
+import CarambaKit
 
 public struct DoneThisOauthEntity: Oauth2Entity {
 

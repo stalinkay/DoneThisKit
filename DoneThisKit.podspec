@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DoneThisKit'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'Swift client for iDoneThis API.'
   s.description      = <<-DESC
 Swift client for iDoneThis API
@@ -17,6 +17,6 @@ Swift client for iDoneThis API
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
   
-  s.dependency 'Core/Networking', '~> 0.0'
+  s.dependency 'CarambaKit/Networking', '~> 0.0'
   s.dependency 'SwiftyJSON', '~> 2.3'
 end
