@@ -18,6 +18,7 @@ pod "DoneThisKit"
 ```
 
 ## TODO
+- [ ] Test client
 - [ ] Authentication
 
 ## How to
