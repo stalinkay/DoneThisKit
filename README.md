@@ -1,5 +1,3 @@
-# DoneThisKit
-
 ![logo](assets/idonethis-kit-logo.png)
 
 [![CI Status](http://img.shields.io/travis/carambalabs/DoneThisKit.svg?style=flat)](https://travis-ci.org/carambalabs/DoneThisKit)
