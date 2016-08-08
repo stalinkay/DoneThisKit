@@ -26,7 +26,7 @@ class HookRequestFactorySpec: QuickSpec {
         describe("-hookShow:id:") {
             itBehavesLike("factory-request", sharedExampleContext: { () -> (NSDictionary) in
                 var context: [String: AnyObject] = [:]
-                context["request"] = subject.hookShow(id: "333")
+                context["request"] = subject.hookShow(identifier: "333")
                 context["url"] = "https://beta.idonethis.com/api/v2/hooks/333"
                 context["method"] = "GET"
                 return context
@@ -36,7 +36,7 @@ class HookRequestFactorySpec: QuickSpec {
         describe("-hookUpdate:id:targetUrl:teamId:") {
             itBehavesLike("factory-request", sharedExampleContext: { () -> (NSDictionary) in
                 var context: [String: AnyObject] = [:]
-                context["request"] = subject.hookUpdate(id: "333", targetUrl: "target_url", teamId: "444")
+                context["request"] = subject.hookUpdate(identifier: "333", targetUrl: "target_url", teamId: "444")
                 context["url"] = "https://beta.idonethis.com/api/v2/hooks/333"
                 context["method"] = "POST"
                 context["body"] = ["target_url": "target_url", "team_id": "444"]
@@ -47,7 +47,7 @@ class HookRequestFactorySpec: QuickSpec {
         describe("-hookDelete:") {
             itBehavesLike("factory-request", sharedExampleContext: { () -> (NSDictionary) in
                 var context: [String: AnyObject] = [:]
-                context["request"] = subject.hookDelete(id: "333")
+                context["request"] = subject.hookDelete(identifier: "333")
                 context["url"] = "https://beta.idonethis.com/api/v2/hooks/333"
                 context["method"] = "DELETE"
                 return context

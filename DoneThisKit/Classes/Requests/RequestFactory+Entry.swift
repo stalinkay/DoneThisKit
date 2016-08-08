@@ -2,17 +2,17 @@ import Foundation
 import Core
 
 internal extension RequestFactory {
-    
+
     // MARK: - Internal
-    
+
     internal func entryIndex() -> NSURLRequest {
         return self.urlRequestBuilder.get(path: "api/v2/entries").build()
     }
-    
+
     internal func entryShow(hashId hashId: String) -> NSURLRequest {
         return self.urlRequestBuilder.get(path: "api/v2/entries/\(hashId)").build()
     }
-    
+
     internal func entryCreate(body body: String, teamId: String, occurredOn: NSDate?, status: EntryStatus?) -> NSURLRequest {
         var parameters: [String: AnyObject] = [:]
         parameters["body"] = body
@@ -30,7 +30,7 @@ internal extension RequestFactory {
             .withBody(parameters)
             .build()
     }
-    
+
     internal func entryUpdate(hashId hashId: String, body body: String, teamId: String, occurredOn: NSDate?, status: EntryStatus?) -> NSURLRequest {
         var parameters: [String: AnyObject] = [:]
         parameters["body"] = body
@@ -48,11 +48,11 @@ internal extension RequestFactory {
             .withBody(parameters)
             .build()
     }
-    
+
     internal func entryDelete(hashId hashId: String) -> NSURLRequest {
         return self.urlRequestBuilder
             .delete(path:"api/v2/entries/\(hashId)")
             .build()
     }
-    
+
 }
