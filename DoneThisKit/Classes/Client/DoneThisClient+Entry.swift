@@ -12,7 +12,7 @@ extension DoneThisClient {
         return self.request(self.requestFactory.teamShow(hashId: hashId)).map { try Entry(json: $0.0) }
     }
 
-    public func create(body body: String, teamId: String, occurredOn: NSDate?, status: EntryStatus?) -> Observable<Entry> {
+    public func entryCreate(body body: String, teamId: String, occurredOn: NSDate?, status: EntryStatus?) -> Observable<Entry> {
         let request = self.requestFactory.entryCreate(body: body, teamId: teamId, occurredOn: occurredOn, status: status)
         return self.request(request).map { try Entry(json: $0.0) }
     }
