@@ -9,7 +9,7 @@ public class DoneThisClient: JsonHttpClient {
 
     // MARK: - Init
 
-    public init(sessionAdapter: Adapter<NSURLRequest, NSURLRequest>? = nil) {
+    public init(sessionAdapter: Adapter<NSURLRequest, NSURLRequest>? = DoneThisSessionAdapter()) {
         self.requestFactory = RequestFactory.instance
         super.init(sessionAdapter: sessionAdapter)
     }

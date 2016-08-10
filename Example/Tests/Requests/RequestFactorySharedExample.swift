@@ -35,6 +35,8 @@ class RequestFactorySharedExample: QuickConfiguration {
                 let expectedJson = body != nil ? JSON(body) : JSON([:])
                 expect(requestJson) == expectedJson
             }
+            
         }
+        
     }
 }
