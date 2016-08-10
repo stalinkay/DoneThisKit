@@ -1,7 +1,7 @@
 import Foundation
 import SwiftyJSON
 
-public struct Hook {
+public struct Hook: Equatable {
 
     // MARK: - Attributes
 
@@ -27,4 +27,8 @@ public struct Hook {
         self.updatedAt = DateFormatters.main.dateFromString(updatedAtString)!
     }
 
+}
+
+public func == (lhs: Hook, rhs: Hook) -> Bool {
+    return lhs.identifier == rhs.identifier
 }

@@ -1,7 +1,7 @@
 import Foundation
 import SwiftyJSON
 
-public struct Team {
+public struct Team: Equatable {
 
     // MARK: - Attributes
 
@@ -23,4 +23,8 @@ public struct Team {
         self.updatedAt = (updatedAtString != nil) ? DateFormatters.main.dateFromString(updatedAtString!) : nil
     }
 
+}
+
+public func == (lhs: Team, rhs: Team) -> Bool {
+    return lhs.hashId == rhs.hashId
 }

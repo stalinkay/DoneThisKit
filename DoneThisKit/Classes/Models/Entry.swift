@@ -7,7 +7,7 @@ public enum EntryStatus: String, Equatable {
     case Done
 }
 
-public struct Entry {
+public struct Entry: Equatable {
 
     // MARK: - Attributes
 
@@ -45,4 +45,8 @@ public struct Entry {
         self.completedOn = (completedOnString != nil) ? DateFormatters.main.dateFromString(completedOnString!)! : nil
         self.archivedAt = (archivedAtString != nil) ? DateFormatters.main.dateFromString(archivedAtString!)! : nil
     }
+}
+
+public func == (lhs: Entry, rhs: Entry) -> Bool {
+    return lhs.hashId == rhs.hashId
 }

@@ -1,7 +1,7 @@
 import Foundation
 import SwiftyJSON
 
-public struct User {
+public struct User: Equatable {
 
     public let emailAddress: String
     public let fullName: String
@@ -16,4 +16,8 @@ public struct User {
         self.hashId = hashId
     }
 
+}
+
+public func == (lhs: User, rhs: User) -> Bool {
+    return lhs.hashId == rhs.hashId
 }
