@@ -6,11 +6,11 @@ internal extension RequestFactory {
     // MARK: - Internal
 
     internal func entryIndex() -> NSURLRequest {
-        return self.urlRequestBuilder.get(path: "api/v2/entries").build()
+        return self.urlRequestBuilder.get(path: "api/v2/entries").build(bodyEncoding: UrlParameterEncoding.URL)
     }
 
     internal func entryShow(hashId hashId: String) -> NSURLRequest {
-        return self.urlRequestBuilder.get(path: "api/v2/entries/\(hashId)").build()
+        return self.urlRequestBuilder.get(path: "api/v2/entries/\(hashId)").build(bodyEncoding: UrlParameterEncoding.URL)
     }
 
     internal func entryCreate(body body: String, teamId: String, occurredOn: NSDate?, status: EntryStatus?) -> NSURLRequest {

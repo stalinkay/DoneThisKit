@@ -4,11 +4,11 @@ import CarambaKit
 internal extension RequestFactory {
 
     internal func hookIndex() -> NSURLRequest {
-        return self.urlRequestBuilder.get(path: "/api/v2/hooks").build()
+        return self.urlRequestBuilder.get(path: "/api/v2/hooks").build(bodyEncoding: UrlParameterEncoding.URL)
     }
 
     internal func hookShow(identifier identifier: String) -> NSURLRequest {
-        return urlRequestBuilder.get(path: "/api/v2/hooks/\(identifier)").build()
+        return urlRequestBuilder.get(path: "/api/v2/hooks/\(identifier)").build(bodyEncoding: UrlParameterEncoding.URL)
     }
 
     internal func hookCreate(targetUrl targetUrl: String, teamId: String) -> NSURLRequest {
