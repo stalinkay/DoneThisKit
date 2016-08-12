@@ -1,5 +1,3 @@
-require 'versionomy'
-
 COMMIT_MESSAGE = "Bump podspec to"
 
 lane :pods do
@@ -18,9 +16,6 @@ end
 
 lane :push do
   ensure_git_branch
-  github_tag = last_git_tag
-  github_tag ||= "0.0.1"
-  github_tag_version = Versionomy.parse(github_tag)
   version = version_bump_podspec(path: "DoneThisKit.podspec")
   git_commit(path: ["./DoneThisKit.podspec", "./Example/Podfile.lock"], message: "#{COMMIT_MESSAGE} #{version}")
   changelog = changelog_from_git_commits
