@@ -1,6 +1,9 @@
 import Foundation
 import SwiftyJSON
 
+/**
+ *  Hook
+ */
 public struct Hook: Equatable {
 
     // MARK: - Attributes
