@@ -11,12 +11,13 @@ lane :tests do
 end
 
 lane :travis do
-  return if last_git_commit.include?(COMMIT_MESSAGE)
   pods
   tests
+  pod_lib_lint(allow_warnings: true, verbose: true)
 end
 
 lane :push do
+  ensure_git_branch
   github_tag = last_git_tag
   github_tag ||= "0.0.1"
   github_tag_version = Versionomy.parse(github_tag)
