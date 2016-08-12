@@ -8,4 +8,10 @@ internal struct DateFormatters {
         return formatter
     }()
 
+    internal static var short: NSDateFormatter = {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+
 }

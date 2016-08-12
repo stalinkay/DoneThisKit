@@ -1,6 +1,9 @@
 import Foundation
 import SwiftyJSON
 
+/**
+ *  Team
+ */
 public struct Team: Equatable {
 
     // MARK: - Attributes

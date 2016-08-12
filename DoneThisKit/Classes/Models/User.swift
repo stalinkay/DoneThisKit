@@ -1,6 +1,9 @@
 import Foundation
 import SwiftyJSON
 
+/**
+ *  User
+ */
 public struct User: Equatable {
 
     public let emailAddress: String
