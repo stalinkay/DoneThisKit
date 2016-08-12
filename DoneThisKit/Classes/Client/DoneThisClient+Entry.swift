@@ -4,8 +4,8 @@ import SwiftyJSON
 
 extension DoneThisClient {
 
-    public func entryIndex() -> Observable<[Entry]> {
-        return self.request(self.requestFactory.entryIndex()).map { try $0.0.arrayValue.map { try Entry(json: $0) } }
+    public func entryIndex(teamId teamId: String) -> Observable<[Entry]> {
+        return self.request(self.requestFactory.entryIndex(teamId: teamId)).map { try $0.0.arrayValue.map { try Entry(json: $0) } }
     }
 
     public func entryShow(hashId hashId: String) -> Observable<Entry> {
