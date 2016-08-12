@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DoneThisKit'
-  s.version          = '0.0.18'
+  s.version          = '0.0.19'
   s.summary          = 'Swift client for iDoneThis API.'
   s.description      = <<-DESC
 Swift client for iDoneThis API
