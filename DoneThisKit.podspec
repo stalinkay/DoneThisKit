@@ -6,6 +6,7 @@ Pod::Spec.new do |s|
 Swift client for iDoneThis API
                        DESC
   s.homepage         = 'https://github.com/carambalabs/DoneThisKit'
+  s.social_media_url = "https://twitter.com/carambalabs"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Pedro Piñera' => 'pepibumur@gmail.com', 'Sergi Gracia' => 'sergigram@gmail.com', 'Isaac Roldán' => "isaac.roldan@gmail.com" }
   s.source           = { :git => 'https://github.com/carambalabs/DoneThisKit.git', :tag => s.version.to_s }
