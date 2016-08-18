@@ -17,7 +17,7 @@ class EntryRequestFactorySpec: QuickSpec {
             itBehavesLike("factory-request", sharedExampleContext: { () -> (NSDictionary) in
                 var context: [String: AnyObject] = [:]
                 context["request"] = subject.entryIndex(teamId: "333")
-                context["url"] = "https://beta.idonethis.com/api/v2/entries?team_id=333"
+                context["url"] = "https://beta.idonethis.com/api/v2/teams/333/entries"
                 context["method"] = "GET"
                 return context
             })

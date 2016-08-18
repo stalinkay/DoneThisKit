@@ -6,8 +6,7 @@ internal extension RequestFactory {
     // MARK: - Internal
 
     internal func entryIndex(teamId teamId: String) -> NSURLRequest {
-        return self.urlRequestBuilder.get(path: "api/v2/entries")
-            .withParameters(["team_id": teamId])
+        return self.urlRequestBuilder.get(path: "api/v2/teams/\(teamId)/entries")
             .build(bodyEncoding: UrlParameterEncoding.URL)
     }
 
