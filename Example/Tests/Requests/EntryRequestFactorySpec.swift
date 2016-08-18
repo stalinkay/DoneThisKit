@@ -36,10 +36,10 @@ class EntryRequestFactorySpec: QuickSpec {
         describe("-entryCreate:body:teamId:occurredOn:status:") {
             itBehavesLike("factory-request", sharedExampleContext: { () -> (NSDictionary) in
                 var context: [String: AnyObject] = [:]
-                context["request"] = subject.entryCreate(body: "body", teamId: "333", occurredOn: nil, status: EntryStatus.Goal)
-                context["url"] = "https://beta.idonethis.com/api/v2/entries"
+                context["request"] = subject.entryCreate(body: "body", teamId: "333", status: EntryStatus.Goal)
+                context["url"] = "https://beta.idonethis.com/api/v2/entries?body=body&status=goal&team_id=333"
                 context["method"] = "POST"
-                context["body"] = ["team_id": "333", "status": "goal", "body": "body"]
+                context["body"] = []
                 return context
             })
         }
@@ -47,7 +47,7 @@ class EntryRequestFactorySpec: QuickSpec {
         describe("-entryUpdate:hashId:body:teamId:occurredOn:status:") {
             itBehavesLike("factory-request", sharedExampleContext: { () -> (NSDictionary) in
                 var context: [String: AnyObject] = [:]
-                context["request"] = subject.entryUpdate(hashId: "444", body: "body", teamId: "333", occurredOn: nil, status: EntryStatus.Goal)
+                context["request"] = subject.entryUpdate(hashId: "444", body: "body", teamId: "333", status: EntryStatus.Goal)
                 context["url"] = "https://beta.idonethis.com/api/v2/entries/444"
                 context["method"] = "POST"
                 context["body"] = ["team_id": "333", "status": "goal", "body": "body"]

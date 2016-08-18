@@ -14,33 +14,23 @@ internal extension RequestFactory {
         return self.urlRequestBuilder.get(path: "api/v2/entries/\(hashId)").build(bodyEncoding: UrlParameterEncoding.URL)
     }
 
-    internal func entryCreate(body body: String, teamId: String, occurredOn: NSDate?, status: EntryStatus?) -> NSURLRequest {
+    internal func entryCreate(body body: String, teamId: String, status: EntryStatus?) -> NSURLRequest {
         var parameters: [String: AnyObject] = [:]
         parameters["body"] = body
         parameters["team_id"] = teamId
-        if let occurredOn = occurredOn {
-            let dateFormater = NSDateFormatter()
-            dateFormater.dateFormat = "yyyy-mm-dd"
-            parameters["occurred_on"] = dateFormater.stringFromDate(occurredOn)
-        }
         if let status = status {
             parameters["status"] = status.rawValue.lowercaseString
         }
         return self.urlRequestBuilder
             .post(path:"api/v2/entries")
-            .withBody(parameters)
-            .build()
+            .withParameters(parameters)
+            .build(parameterEncoding: UrlParameterEncoding.URLEncodedInURL)
     }
 
-    internal func entryUpdate(hashId hashId: String, body body: String, teamId: String, occurredOn: NSDate?, status: EntryStatus?) -> NSURLRequest {
+    internal func entryUpdate(hashId hashId: String, body body: String, teamId: String, status: EntryStatus?) -> NSURLRequest {
         var parameters: [String: AnyObject] = [:]
         parameters["body"] = body
         parameters["team_id"] = teamId
-        if let occurredOn = occurredOn {
-            let dateFormater = NSDateFormatter()
-            dateFormater.dateFormat = "yyyy-mm-dd"
-            parameters["occurred_on"] = dateFormater.stringFromDate(occurredOn)
-        }
         if let status = status {
             parameters["status"] = status.rawValue.lowercaseString
         }

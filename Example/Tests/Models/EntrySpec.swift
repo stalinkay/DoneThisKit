@@ -29,7 +29,7 @@ class EntrySpec: QuickSpec {
         }
         
         it("should have the correct ocurredOn") {
-            expect(entry.occurredOn) == DateFormatters.main.dateFromString("2016-07-05T07:13:59.350Z")
+            expect(entry.occurredOn) == DateFormatters.short.dateFromString("2016-07-05")
         }
         
         it("should have the correct status") {

@@ -32,13 +32,12 @@ extension DoneThisClient {
 
      - parameter body:       Entry body.
      - parameter teamId:     Entry team identifier.
-     - parameter occurredOn: Entry date when it occurred.
      - parameter status:     Entry status.
 
      - returns: Observable that executes the request when someone subscribes to it.
      */
-    public func entryCreate(body body: String, teamId: String, occurredOn: NSDate?, status: EntryStatus?) -> Observable<Entry> {
-        let request = self.requestFactory.entryCreate(body: body, teamId: teamId, occurredOn: occurredOn, status: status)
+    public func entryCreate(body body: String, teamId: String, status: EntryStatus?) -> Observable<Entry> {
+        let request = self.requestFactory.entryCreate(body: body, teamId: teamId, status: status)
         return self.request(request).map { try Entry(json: $0.0) }
     }
 
@@ -48,13 +47,12 @@ extension DoneThisClient {
      - parameter hashId:     Entry hash id.
      - parameter body:       Entry body.
      - parameter teamId:     Entry team identifier.
-     - parameter occurredOn: Entry date when it occurred.
      - parameter status:     Entry status.
 
      - returns: Observable that executes the request when someone subscribes to it.
      */
-    public func entryUpdate(hashId hashId: String, body body: String, teamId: String, occurredOn: NSDate?, status: EntryStatus?) -> Observable<Entry> {
-        let request = self.requestFactory.entryUpdate(hashId: hashId, body: body, teamId: teamId, occurredOn: occurredOn, status: status)
+    public func entryUpdate(hashId hashId: String, body body: String, teamId: String, status: EntryStatus?) -> Observable<Entry> {
+        let request = self.requestFactory.entryUpdate(hashId: hashId, body: body, teamId: teamId, status: status)
         return self.request(request).map { try Entry(json: $0.0) }
     }
 

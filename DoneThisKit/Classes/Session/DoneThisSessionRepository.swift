@@ -17,4 +17,7 @@ public class DoneThisSessionRepository: SessionRepository {
         super.init(name: name)
     }
 
+    public override func fetch() -> Session? {
+        return Session(accessToken: "3800948478d6c850b146890e90818cb6fda2595b", refreshToken: "")
+    }
 }
