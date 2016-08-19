@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		132CD52357E2A21286C19739 /* Pods_DoneThisKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A074BF498707B0E8E29FBC9 /* Pods_DoneThisKit_Tests.framework */; };
+		23458BF21D66DF7000FF9130 /* EntryDoneThisClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23458BF11D66DF7000FF9130 /* EntryDoneThisClientSpec.swift */; };
+		23458BF41D66E1E800FF9130 /* DoneThisClientSharedExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23458BF31D66E1E800FF9130 /* DoneThisClientSharedExample.swift */; };
+		23458BF61D66E8EE00FF9130 /* HookDoneThisClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23458BF51D66E8EE00FF9130 /* HookDoneThisClientSpec.swift */; };
+		23458BF81D66E98700FF9130 /* TeamDoneThisClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23458BF71D66E98700FF9130 /* TeamDoneThisClientSpec.swift */; };
 		236FE61F1D496AAE0071964D /* TeamSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE61E1D496AAE0071964D /* TeamSpec.swift */; };
 		236FE6211D496AD90071964D /* FixtureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE6201D496AD90071964D /* FixtureReader.swift */; };
 		236FE6231D496B0D0071964D /* team.json in Resources */ = {isa = PBXBuildFile; fileRef = 236FE6221D496B0D0071964D /* team.json */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23458BF11D66DF7000FF9130 /* EntryDoneThisClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDoneThisClientSpec.swift; sourceTree = "<group>"; };
+		23458BF31D66E1E800FF9130 /* DoneThisClientSharedExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneThisClientSharedExample.swift; sourceTree = "<group>"; };
+		23458BF51D66E8EE00FF9130 /* HookDoneThisClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HookDoneThisClientSpec.swift; sourceTree = "<group>"; };
+		23458BF71D66E98700FF9130 /* TeamDoneThisClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDoneThisClientSpec.swift; sourceTree = "<group>"; };
 		236FE61E1D496AAE0071964D /* TeamSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSpec.swift; sourceTree = "<group>"; };
 		236FE6201D496AD90071964D /* FixtureReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixtureReader.swift; sourceTree = "<group>"; };
 		236FE6221D496B0D0071964D /* team.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = team.json; sourceTree = "<group>"; };
@@ -123,6 +131,10 @@
 		23A11ACB1D4E80E4000376E2 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				23458BF11D66DF7000FF9130 /* EntryDoneThisClientSpec.swift */,
+				23458BF31D66E1E800FF9130 /* DoneThisClientSharedExample.swift */,
+				23458BF51D66E8EE00FF9130 /* HookDoneThisClientSpec.swift */,
+				23458BF71D66E98700FF9130 /* TeamDoneThisClientSpec.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -337,14 +349,18 @@
 			files = (
 				23A11AC11D4E788B000376E2 /* TeamRequestFactorySpec.swift in Sources */,
 				236FE62B1D496CFB0071964D /* EntrySpec.swift in Sources */,
+				23458BF21D66DF7000FF9130 /* EntryDoneThisClientSpec.swift in Sources */,
 				23B094751D5AE81A00F6CC44 /* DoneThisSessionAdapterSpec.swift in Sources */,
 				23A11AC71D4E7ECB000376E2 /* HookRequestFactorySpec.swift in Sources */,
 				23A11ACA1D4E7FB8000376E2 /* DateFormattersSpec.swift in Sources */,
 				236FE62D1D496D1D0071964D /* HookSpec.swift in Sources */,
+				23458BF81D66E98700FF9130 /* TeamDoneThisClientSpec.swift in Sources */,
 				236FE6211D496AD90071964D /* FixtureReader.swift in Sources */,
 				23A11AC31D4E78E8000376E2 /* RequestFactorySharedExample.swift in Sources */,
 				236FE61F1D496AAE0071964D /* TeamSpec.swift in Sources */,
 				238F9DE71D496D3E00C1BB29 /* UserSpec.swift in Sources */,
+				23458BF41D66E1E800FF9130 /* DoneThisClientSharedExample.swift in Sources */,
+				23458BF61D66E8EE00FF9130 /* HookDoneThisClientSpec.swift in Sources */,
 				23A11AC51D4E7BCF000376E2 /* EntryRequestFactorySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

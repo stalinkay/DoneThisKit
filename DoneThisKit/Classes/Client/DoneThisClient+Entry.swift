@@ -24,7 +24,7 @@ extension DoneThisClient {
      - returns: Observable that executes the request when someone subscribes to it.
      */
     public func entryShow(hashId hashId: String) -> Observable<Entry> {
-        return self.request(self.requestFactory.teamShow(hashId: hashId)).map { try Entry(json: $0.0) }
+        return self.request(self.requestFactory.entryShow(hashId: hashId)).map { try Entry(json: $0.0) }
     }
 
     /**
