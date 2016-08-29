@@ -18,10 +18,6 @@ To install it, simply add the following line to your Podfile:
 pod "DoneThisKit"
 ```
 
-## TODO
-- [ ] Authentication
-
-
 ## References
 - API Documentation: [Link](https://i-done-this.readme.io/docs)
 - DoneThisKit documentation: [Link](http://cocoadocs.org/docsets/DoneThisKit/0.0.28/)
