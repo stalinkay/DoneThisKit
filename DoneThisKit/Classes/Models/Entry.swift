@@ -52,7 +52,7 @@ public struct Entry: Equatable {
         self.team = try Team(json: json["team"])
         self.user = try User(json: json["user"])
         self.occurredOn = (occurredOnString != nil) ? DateFormatters.short.dateFromString(occurredOnString!)! : nil
-        self.completedOn = (completedOnString != nil) ? DateFormatters.main.dateFromString(completedOnString!)! : nil
+        self.completedOn = (completedOnString != nil) ? DateFormatters.short.dateFromString(completedOnString!)! : nil
         self.archivedAt = (archivedAtString != nil) ? DateFormatters.main.dateFromString(archivedAtString!)! : nil
     }
 }
